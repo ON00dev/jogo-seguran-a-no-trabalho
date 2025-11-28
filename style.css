@@ -517,9 +517,9 @@ body::before {
     font-size: 2.1rem;
   }
 
+  .result-gif,
   .final-gif {
-    max-width: 320px; 
-    width: 100%;
+    max-height: 260px;   /* fica perfeito no celular */
   }
 
   .final-card {
@@ -576,3 +576,12 @@ body::before {
   margin-bottom: 2rem;
 }
 
+.result-gif, .final-gif {
+    width: 100%;         /* sempre ocupa a largura limite */
+    height: auto;        /* mantém proporção original */
+    max-height: 350px;   /* impede GIFs gigantes de passar do container */
+    object-fit: contain; /* encaixa SEM cortar e SEM distorcer */
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+}
