@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Segurança - O que você faria?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">⚠️ SafeChoice</h1>
+                <p class="tagline">Educação em Segurança</p>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="game-card">
+                <div class="scenario-section">
+                    <div class="badge">Cenário de Risco</div>
+                    <!-- Updated to use professional scenario image -->
+                    <img id="cenario-img" src="/joaonarampa.png" alt="João em plataforma molhada - risco de queda" class="scenario-image">
+                    <h2 class="title">O que você faria?</h2>
+                    <p id="descricao" class="description">
+                        João precisa subir a uma plataforma molhada para ajustar uma válvula.  
+                        Ele está com pressa e não verificou o estado do piso. O que você faria?
+                    </p>
+                </div>
+
+                <div id="opcoes" class="options-section">
+                    <button class="option-btn option-1" onclick="escolher(1)">
+                        <span class="option-number">1</span>
+                        <span class="option-text">Subir assim mesmo para ganhar tempo.</span>
+                    </button>
+                    <button class="option-btn option-2" onclick="escolher(2)">
+                        <span class="option-number">2</span>
+                        <span class="option-text">Limpar/sinalizar a área antes de subir.</span>
+                    </button>
+                    <button class="option-btn option-3" onclick="escolher(3)">
+                        <span class="option-number">3</span>
+                        <span class="option-text">Pedir para um colega segurar enquanto sobe.</span>
+                    </button>
+                </div>
+
+                <div id="resultado" class="result-section hidden">
+                    <div class="result-card">
+                        <div id="result-icon" class="result-icon"></div>
+                        <p id="texto-resultado" class="result-text"></p>
+                        <video id="video-resultado" width="100%" class="result-video hidden" controls>
+                            <source id="video-src" src="/placeholder.svg" type="video/mp4">
+                        </video>
+                        <button id="reset" onclick="restart()" class="reset-btn">
+                            ↻ Jogar Novamente
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Treine suas habilidades de segurança com cenários realistas</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
