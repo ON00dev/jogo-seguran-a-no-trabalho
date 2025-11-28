@@ -10,51 +10,56 @@
     <div class="wrapper">
         <header class="header">
             <div class="header-content">
-                <h1 class="logo">⚠️ SafeChoice</h1>
+                <h1 class="logo">⚠️ DINÂMICA</h1>
                 <p class="tagline">Educação em Segurança</p>
             </div>
         </header>
 
         <main class="container">
             <div class="game-card">
+
                 <div class="scenario-section">
                     <div class="badge">Cenário de Risco</div>
-                    <!-- Updated to use professional scenario image -->
-                    <img id="cenario-img" src="/joaonarampa.png" alt="João em plataforma molhada - risco de queda" class="scenario-image">
+
+                    <img id="cenario-img" class="scenario-image">
+
                     <h2 class="title">O que você faria?</h2>
-                    <p id="descricao" class="description">
-                        João precisa subir a uma plataforma molhada para ajustar uma válvula.  
-                        Ele está com pressa e não verificou o estado do piso. O que você faria?
-                    </p>
+                    <p id="descricao" class="description"></p>
                 </div>
 
-                <div id="opcoes" class="options-section">
-                    <button class="option-btn option-1" onclick="escolher(1)">
-                        <span class="option-number">1</span>
-                        <span class="option-text">Subir assim mesmo para ganhar tempo.</span>
-                    </button>
-                    <button class="option-btn option-2" onclick="escolher(2)">
-                        <span class="option-number">2</span>
-                        <span class="option-text">Limpar/sinalizar a área antes de subir.</span>
-                    </button>
-                    <button class="option-btn option-3" onclick="escolher(3)">
-                        <span class="option-number">3</span>
-                        <span class="option-text">Pedir para um colega segurar enquanto sobe.</span>
-                    </button>
-                </div>
+                <div id="opcoes" class="options-section"></div>
 
                 <div id="resultado" class="result-section hidden">
                     <div class="result-card">
-                        <div id="result-icon" class="result-icon"></div>
+                        <img id="gif-resultado" class="result-gif hidden">
+
                         <p id="texto-resultado" class="result-text"></p>
-                        <video id="video-resultado" width="100%" class="result-video hidden" controls>
-                            <source id="video-src" src="/placeholder.svg" type="video/mp4">
-                        </video>
-                        <button id="reset" onclick="restart()" class="reset-btn">
+
+                        <button id="continuar" onclick="proximaPergunta()" class="reset-btn hidden">
+                            ➜ Continuar
+                        </button>
+
+                        <button id="reset" onclick="restart()" class="reset-btn hidden">
                             ↻ Jogar Novamente
                         </button>
                     </div>
                 </div>
+                <div id="finalizacao" class="final-section hidden">
+                    <div class="final-card">
+                        <h1 class="final-title">🎉 PARABÉNS!!! 🎉</h1>
+                
+                        <img class="final-gif" id="final-gif"
+                             src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeG5uYW5xaWFmcDdyYnZ5ZmFpYWM0azQ0eHU4OXZpZm9qd2d1am01dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DhstvI3zZ598Nb1rFf/giphy.gif">
+                
+                        <p class="final-text">Você concluiu todas as 6 perguntas com excelência!</p>
+                
+                        <button class="reset-btn" onclick="reiniciarJogo()">
+                            🔁 Jogar Novamente
+                        </button>
+                    </div>
+                </div>
+                
+
             </div>
         </main>
 
